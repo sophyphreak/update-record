@@ -1,3 +1,7 @@
 # github.com/gorilla/mux v1.7.4
 ## explicit
 github.com/gorilla/mux
+# github.com/heroku/x v0.0.25
+## explicit
+github.com/heroku/x/hmetrics
+github.com/heroku/x/hmetrics/onload
