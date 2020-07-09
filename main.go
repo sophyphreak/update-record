@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
@@ -46,7 +47,7 @@ func handleRequests() {
 	router.HandleFunc("/account", createAccount).Methods("POST")
 	router.HandleFunc("/account/{number}", deleteAccount).Methods("DELETE")
 	router.HandleFunc("/account/{number}", updateAccount).Methods("PUT")
-	log.Fatal(http.ListenAndServe(":10000", router))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }
 
 func createAccount(w http.ResponseWriter, r *http.Request) {
