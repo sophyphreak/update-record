@@ -1,1 +1,1 @@
-web: bin/updateRecord
+web: updateRecord
