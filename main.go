@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 type Account struct {
